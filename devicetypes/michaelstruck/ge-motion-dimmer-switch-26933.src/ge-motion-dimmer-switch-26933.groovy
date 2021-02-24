@@ -73,7 +73,7 @@ metadata {
                     "2" : "Vacancy (no auto-on/auto-off)",
                     "3" : "Occupancy (auto-on/auto-off)"
                 ],
-                required: false
+                required: true
             )
             //param 1
             input ("timeoutduration","enum", title: "Timeout Duration (Occupancy/Vacancy)",
@@ -85,7 +85,7 @@ metadata {
                     "15" : "15 minutes",
                     "30" : "30 minutes"
                 ],
-                required: false
+                required: true
             )
             input (name: "timeoutdurationPress", title: "Triple Press Timeout (Occupancy/Vacancy)",
                 description: "Physically press 'on' three times within 10 seconds to override timeout. Resets when light goes off",
@@ -97,7 +97,7 @@ metadata {
                     "15" : "15 minutes",
                     "30" : "30 minutes"
                 ],
-                required: false
+                required: true
             )
             input (name: "modeOverride", title: "Triple Press Operating Mode Override",
             	description: "Physically press 'off' three times within 10 seconds to override the current operating mode",
@@ -107,7 +107,7 @@ metadata {
                     "2" : "Vacancy (no auto-on/auto-off)",
                     "3" : "Occupancy (auto-on/auto-off)"
                 ],
-                required: false
+                required: true
             )
             //param 6
             input "motion", "bool", title: "Enable Motion Sensor", defaultValue:true
